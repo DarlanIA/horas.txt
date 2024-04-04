@@ -1,0 +1,8 @@
+from datetime import datetime
+
+def obter_horas():
+    hora_atual = datetime.now().strftime("%H:%M:%S")
+    return f"As horas atuais são: {hora_atual}"
+
+with open('horas.txt', 'w') as arquivo:
+    arquivo.write(obter_horas())
